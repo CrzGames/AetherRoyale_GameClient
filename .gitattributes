@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 
+=======
+testtraklfs.txt filter=lfs diff=lfs merge=lfs -text
+toto.txt filter=lfs diff=lfs merge=lfs -text
+>>>>>>> 918c96c8e5364ea8dea8176f8063883087b878eb
