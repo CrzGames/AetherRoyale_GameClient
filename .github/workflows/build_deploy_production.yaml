@@ -1,0 +1,18 @@
+name: build_deploy_production
+
+on:
+  release:
+    types:
+      - published
+  workflow_dispatch:
+
+jobs:
+  build_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Get latest release tag
+        id: previoustag
+        uses: WyriHaximus/github-action-get-previous-tag@v2

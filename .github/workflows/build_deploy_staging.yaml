@@ -1,0 +1,16 @@
+name: build_deploy_staging
+
+on:
+  push:
+    branches:
+      - staging
+  workflow_dispatch:
+
+jobs:
+  build_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      # ${{ github.sha }} is the commit hash of the current commit, which can be used as a unique tag for the Docker image.
